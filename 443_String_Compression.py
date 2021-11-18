@@ -12,6 +12,7 @@ def compress(chars):
         count = 0
         if index_completed == 0:
             i = 1
+
         for j in chars[i:len(chars)]:
             if j != current_item:
                 break
@@ -29,10 +30,7 @@ def compress(chars):
             if count > 9:
                 chars = chars[0:index_completed] + [current_item]+ list(str(count)) + chars[i:len(chars)]
                 index_completed = index_completed + len(str(count)) + 1
-
             else:
-
-                #print(current_item, count, i, chars)
                 chars = chars[0:index_completed] + [current_item, count] + chars[i:len(chars)]
                 index_completed = index_completed + 2
         i = index_completed
