@@ -1,14 +1,11 @@
 class Solution:
     def isAnagram(self, s, t):
-        return sorted(s) == sorted(t)
-        # checked = []
-        # for ch in s:
-        #     if checked.count(ch) < 1:
-        #         if s.count(ch) != t.count(ch):
-        #             return False
-        #         checked.append(ch)
-        #
-        # return True
+        # return sorted(s) == sorted(t)
+        checked = []
+        for ch in s:
+            if s.count(ch) != t.count(ch):
+                return False
+        return True
 
 
     def findAnagrams(self, s, p):
