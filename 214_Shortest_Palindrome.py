@@ -4,12 +4,12 @@ class Solution:
     def shortestPalindrome(self, s):
         main_s = s
         current_index = len(s) - 1
-        text_added = ''
+        chars_to_add = ''
 
         while self.isNotPalindrome(s):
-            text_added = text_added + main_s[current_index]
+            chars_to_add = chars_to_add + main_s[current_index]
             current_index = current_index - 1
-            s = text_added + main_s
+            s = chars_to_add + main_s
 
         return s
 
